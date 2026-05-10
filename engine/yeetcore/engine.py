@@ -2,10 +2,10 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 class ErrorEngine:
     def __init__(self):
-        self.browser = QWebEngineView()
+        self.view = QWebEngineView()
 
     def load(self, url):
-        self.browser.setUrl(url)
+        self.view.setUrl(url)
 
     def get_view(self):
-        return self.browser
+        return self.view

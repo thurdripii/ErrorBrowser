@@ -1,0 +1,20 @@
+[package]
+name = "error-browser"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+wry = "0.35"             # Motor Web
+tao = "0.24"             # Janela Nativa
+adblock = "0.7"           # Bloqueador de Ads
+rust-embed = "6.6"       # Embutir ícones no código
+embed-resource = "1.8"   # Ícone no .exe
+
+[build-dependencies]
+embed-resource = "1.8"
+
+[profile.release]
+opt-level = "z"          # Foco total em tamanho pequeno
+lto = true               # Deixa o código mais "esperto" e rápido
+panic = "abort"          # Se der erro, ele fecha direto (economiza CPU)
+strip = true             # Remove "lixo" de texto do executável
